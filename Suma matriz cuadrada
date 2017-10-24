@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+int mat1[2][2]={{0,0},{0,0}};
+int mat2[2][2]={{0,0},{0,0}};
+int sumamat[2][2]={{0,0},{0,0}};
+int i,j,col=2,fil=2;
+
+printf("Matriz 1\n\n");
+	for(i=0;i<fil;i++){
+		for( j=0;j<col;j++){
+		printf("Ingresa numero para posicion[%i][%i]",i,j);
+			scanf("%i",&mat1[i][j]);
+		}
+	}printf("\n\t");
+	printf("Matriz 2\n\n");
+	for( i=0;i<2;i++){
+		for( j=0;j<2;j++){
+		printf("Ingresa numero para posicion[%i][%i]",i,j);
+			scanf("%i",&mat2[i][j]);
+		}
+	}
+	for( i=0;i<fil;i++){
+		for( j=0;j<col;j++){
+		sumamat[i][j]=mat1[i][j]+mat2[i][j];
+		
+		}
+	}
+	printf("\n\nMatriz Sumada\n\n");
+	for( i=0;i<fil;i++){
+		printf("\n");
+		for( j=0;j<col;j++){
+		printf("[%i]",sumamat[i][j]);
+		}
+		printf("\n\t");
+	}
+	
+}
